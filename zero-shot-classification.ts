@@ -1,4 +1,4 @@
-import { newModelCache } from './pipe-cache'
+import { newModelCache } from './pipe-cache.js'
 
 export type ZeroShotClassificationResult = Array<{
   label: string

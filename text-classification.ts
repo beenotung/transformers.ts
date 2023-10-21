@@ -1,4 +1,4 @@
-import { newModelCache } from './pipe-cache'
+import { newModelCache } from './pipe-cache.js'
 
 let cache = newModelCache('sentiment-analysis')
 

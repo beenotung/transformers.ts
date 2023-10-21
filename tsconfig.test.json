@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "strict": true,
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "emitDeclarationOnly": false,
+    "declaration": false,
+    "skipLibCheck": true,
+    "outDir": "test"
+  },
+  "files": ["index.spec.ts"]
+}

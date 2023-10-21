@@ -1,4 +1,4 @@
-dist
+test/
 node_modules/
 dist/
 *-lock.json
