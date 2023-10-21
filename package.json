@@ -2,8 +2,18 @@
   "name": "transformer.ts",
   "version": "0.0.0",
   "type": "module",
-  "description": "",
-  "keywords": [],
+  "description": "Typescript wrapper for @xenova/transformers",
+  "keywords": [
+    "typescript",
+    "transformer",
+    "transformers",
+    "NLP",
+    "multi-model",
+    "AI",
+    "general-purpose",
+    "wrapper",
+    "types"
+  ],
   "author": {
     "name": "Beeno Tung",
     "email": "aabbcc1241@yahoo.com.hk",
