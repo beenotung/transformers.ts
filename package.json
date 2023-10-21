@@ -4,8 +4,20 @@
   "type": "module",
   "description": "",
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "name": "Beeno Tung",
+    "email": "aabbcc1241@yahoo.com.hk",
+    "url": "https://beeno-tung.surge.sh"
+  },
+  "license": "BSD-2-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beenotung/transformer.ts.git"
+  },
+  "homepage": "https://github.com/beenotung/transformer.ts#readme",
+  "bugs": {
+    "url": "https://github.com/beenotung/transformer.ts/issues"
+  },
   "main": "dist/cjs.js",
   "types": "dist/index.d.ts",
   "module": "dist/esm.js",
