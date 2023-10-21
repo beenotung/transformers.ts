@@ -1,10 +1,10 @@
-# transformer.ts
+# transformers.ts
 
 Typescript wrapper for [@xenova/transformers](https://www.npmjs.com/package/@xenova/transformers).
 
 Works in both commonjs and ESM module projects.
 
-[![npm Package Version](https://img.shields.io/npm/v/transformer.ts)](https://www.npmjs.com/package/transformer.ts)
+[![npm Package Version](https://img.shields.io/npm/v/transformers.ts)](https://www.npmjs.com/package/transformers.ts)
 
 ## Supported Tasks
 

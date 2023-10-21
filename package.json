@@ -1,5 +1,5 @@
 {
-  "name": "transformer.ts",
+  "name": "transformers.ts",
   "version": "1.0.1",
   "description": "Typescript wrapper for @xenova/transformers",
   "keywords": [
@@ -24,11 +24,11 @@
   "license": "BSD-2-Clause",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/beenotung/transformer.ts.git"
+    "url": "git+https://github.com/beenotung/transformers.ts.git"
   },
-  "homepage": "https://github.com/beenotung/transformer.ts#readme",
+  "homepage": "https://github.com/beenotung/transformers.ts#readme",
   "bugs": {
-    "url": "https://github.com/beenotung/transformer.ts/issues"
+    "url": "https://github.com/beenotung/transformers.ts/issues"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
