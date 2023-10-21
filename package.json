@@ -1,6 +1,6 @@
 {
   "name": "transformer.ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Typescript wrapper for @xenova/transformers",
   "keywords": [
     "typescript",
