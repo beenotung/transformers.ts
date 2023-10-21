@@ -1,12 +1,19 @@
-import { pipeline } from '@xenova/transformers'
+import { newModelCache } from './pipe-cache'
 
 export type ZeroShotClassificationResult = Array<{
   label: string
   score: number
 }>
 
-export async function zeroShotClassification(text: string, labels: string[]) {
-  let classifier = await pipeline('zero-shot-classification')
+let cache = newModelCache('zero-shot-classification')
+
+export async function zeroShotClassification(input: {
+  model?: string
+  text: string
+  labels: string[]
+}) {
+  let model = input.model || 'Xenova/distilbert-base-uncased-mnli'
+  let classifier = await cache.loadModel(model)
 
   type Output = {
     sequence: string
@@ -14,7 +21,7 @@ export async function zeroShotClassification(text: string, labels: string[]) {
     scores: number[]
   }
 
-  let output: Output = await classifier(text, labels, {
+  let output: Output = await classifier(input.text, input.labels, {
     multi_label: true,
   })
   /**

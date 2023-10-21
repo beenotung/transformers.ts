@@ -1,31 +1,51 @@
-import { Pipeline, pipeline } from '@xenova/transformers'
 import { newModelCache } from './pipe-cache'
+
+let cache = newModelCache('sentiment-analysis')
 
 /** @alias SentimentAnalysisResult */
 export type TextClassificationResult = Array<{
-  label: SentimentAnalysisLabel
+  label: TextClassificationLabel
   score: number
 }>
 
 /** @alias SentimentAnalysisLabel */
-export type TextClassificationLabel = 'POSITIVE' | 'NEGATIVE'
+export type TextClassificationLabel =
+  // Xenova/distilbert-base-uncased-finetuned-sst-2-english
+  | 'POSITIVE'
+  | 'NEGATIVE'
+  // Xenova/bert-base-multilingual-uncased-sentiment
+  | '5 stars'
+  | '4 stars'
+  | '3 stars'
+  | '2 stars'
+  | '1 star'
+  // Xenova/toxic-bert
+  | 'toxic'
+  | 'insult'
+  | 'obscene'
+  | 'identity_hate'
+  | 'threat'
+  | 'severe_toxic'
 
-let cache = newModelCache('sentiment-analysis')
+export type TextClassificationModel =
+  | 'Xenova/distilbert-base-uncased-finetuned-sst-2-english'
+  | 'Xenova/bert-base-multilingual-uncased-sentiment'
+  | 'Xenova/toxic-bert'
 
 /** @alias sentimentAnalysis */
 export async function textClassification(input: {
-  sentence: string
-  model?: string
+  text: string
+  model?: TextClassificationModel
 }) {
   let model =
     input.model || 'Xenova/distilbert-base-uncased-finetuned-sst-2-english'
 
-  let pipe = await cache.loadModel(model)
+  let classifier = await cache.loadModel(model)
 
-  let out = await pipe(input.sentence)
+  let out = await classifier(input.text)
   // [{'label': 'POSITIVE', 'score': 0.999817686}]
 
-  return out as SentimentAnalysisResult
+  return out as TextClassificationResult
 }
 
 /* alias */
