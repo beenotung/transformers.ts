@@ -1,3 +1,3 @@
 export { pipeline } from '@xenova/transformers'
-export * from './sentiment-analysis'
+export * from './text-classification'
 export * from './zero-shot-classification'
