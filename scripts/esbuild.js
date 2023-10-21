@@ -12,21 +12,21 @@ if (typeof require == 'function') {
 
 function main(esbuild, nodeExternalsPlugin) {
   Promise.all([
+    // esbuild.build({
+    //   entryPoints: ['index.ts'],
+    //   outfile: 'dist/index.js',
+    //   bundle: true,
+    //   minify: false,
+    //   format: 'cjs',
+    //   platform: 'node',
+    //   sourcemap: false,
+    //   sourcesContent: false,
+    //   target: 'node12',
+    //   plugins: [nodeExternalsPlugin()],
+    // }),
     esbuild.build({
       entryPoints: ['index.ts'],
-      outfile: 'dist/cjs.js',
-      bundle: true,
-      minify: false,
-      format: 'cjs',
-      platform: 'node',
-      sourcemap: false,
-      sourcesContent: false,
-      target: 'node12',
-      plugins: [nodeExternalsPlugin()],
-    }),
-    esbuild.build({
-      entryPoints: ['index.ts'],
-      outfile: 'dist/esm.js',
+      outfile: 'dist/index.mjs',
       bundle: true,
       minify: false,
       format: 'esm',

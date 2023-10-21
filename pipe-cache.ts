@@ -1,4 +1,5 @@
-import { Pipeline, pipeline } from '@xenova/transformers'
+import type { Pipeline } from '@xenova/transformers'
+import { pipeline } from './pipeline.js'
 
 export function newModelCache(task: string) {
   let cache = new Map<string | undefined, Promise<Pipeline>>()

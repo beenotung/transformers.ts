@@ -1,7 +1,6 @@
 {
   "name": "transformer.ts",
   "version": "1.0.0",
-  "type": "module",
   "description": "Typescript wrapper for @xenova/transformers",
   "keywords": [
     "typescript",
@@ -12,6 +11,9 @@
     "AI",
     "general-purpose",
     "wrapper",
+    "commonjs",
+    "esm",
+    "module",
     "types"
   ],
   "author": {
@@ -28,9 +30,9 @@
   "bugs": {
     "url": "https://github.com/beenotung/transformer.ts/issues"
   },
-  "main": "dist/cjs.js",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "module": "dist/esm.js",
+  "module": "dist/index.mjs",
   "browser": "dist/browser.js",
   "unpkg": "dist/browser.js",
   "files": [
@@ -42,7 +44,7 @@
     "clean": "rimraf dist",
     "transpile": "run-p esbuild tsc",
     "esbuild": "node scripts/esbuild.js",
-    "tsc": "tsc -p tsconfig.esbuild.json",
+    "tsc": "tsc -p tsconfig.cjs.json",
     "test": "tsc -p tsconfig.test.json && node test/index.spec.js"
   },
   "dependencies": {

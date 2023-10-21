@@ -1,15 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es2018",
+    "target": "es2022",
+    "module": "commonjs",
     "strict": true,
     "noImplicitAny": true,
     "moduleResolution": "node",
-    "emitDeclarationOnly": true,
+    "emitDeclarationOnly": false,
     "declaration": true,
     "skipLibCheck": true,
     "outDir": "dist"
   },
-  "files": [
-    "index.ts"
-  ]
+  "files": ["index.ts"]
 }
